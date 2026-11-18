@@ -4,6 +4,7 @@ import { useState } from "react";
 import Container from "./Container";
 import { PrimaryButton } from "./Button";
 import { FiMenu, FiX } from "react-icons/fi";
+import { logo } from "@/data/logo";
 
 const links = [
   ["Home", "#home"], ["Services", "#services"], ["About me", "#about"],
@@ -15,10 +16,10 @@ export default function Navbar() {
   return (
     <header className="relative z-50 bg-page">
       <Container className="flex min-h-[92px] items-center justify-between gap-8">
-        <a href="#home" className="bg-gradient-to-r from-[#fa6e00] to-[#e60026] bg-clip-text text-[30px] font-black tracking-[.9px] text-transparent">LOGO</a>
+        <a href="#home" className="bg-gradient-to-r from-[#fa6e00] to-[#e60026] bg-clip-text text-[30px] font-black tracking-[.9px] text-transparent">{logo.text}</a>
         <nav className="hidden items-center gap-10 lg:flex">
           {links.map(([label, href], i) => (
-            <a key={href} href={href} className={`text-[18px] font-medium tracking-[.4px] transition-colors hover:text-accent ${i === 0 ? "text-accent font-bold" : "text-muted"}`}>{label}</a>
+            <a key={href} href={href} className={`text-[18px] font-medium tracking-[.4px] transition-colors hover:text-accent`}>{label}</a>
           ))}
         </nav>
         <div className="hidden lg:block"><PrimaryButton>Hire Me</PrimaryButton></div>

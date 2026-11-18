@@ -8,6 +8,7 @@ import {
 } from "react-icons/fa";
 import { MdOutlineMail, MdOutlinePhone } from "react-icons/md";
 import Container from "./Container";
+import { logo } from "@/data/logo";
 
 const navLinks = [
   { name: "Home", href: "#home" },
@@ -34,7 +35,7 @@ export default function Footer() {
             href="/"
             className="bg-gradient-to-r from-[#fa6e00] to-[#e60026] bg-clip-text font-bold text-[30px] tracking-[0.9px] text-transparent"
           >
-            LOGO
+            {logo.text}
           </Link>
 
           <nav className="flex flex-wrap items-center justify-center gap-x-[60px] gap-y-5">

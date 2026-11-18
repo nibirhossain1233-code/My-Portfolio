@@ -11,7 +11,7 @@ export default function About() {
         <SectionHeading title="About Me" description="A little bit about my background, experience and creative approach." />
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           <div className="mx-auto w-full max-w-[480px] overflow-hidden rounded-[42px] bg-[#222]">
-            <img src="https://www.figma.com/api/mcp/asset/63dabd01-28c9-44d6-a8ec-bc257c021f1c/42054.png" alt="Designer portrait" className="aspect-[4/5] w-full object-cover object-top grayscale" />
+            <img src="images/about-me/profile.png" alt="Designer portrait" className="aspect-[4/5] w-full object-cover object-top grayscale" />
           </div>
           <div>
             <p className="text-[17px] leading-[1.9] text-[#959595]">Lorem ipsum dolor sit amet consectetur. Imperdiet convallis blandit felis ligula aliquam. Aenean enim amet, facilisis pellentesque. I design thoughtful digital experiences with a focus on clarity, usability and visual detail.</p>

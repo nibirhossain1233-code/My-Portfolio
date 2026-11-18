@@ -31,7 +31,7 @@ export default function Hero() {
         <div className="relative order-1 mx-auto w-full max-w-[520px] lg:order-2">
           <div className="absolute bottom-0 left-1/2 aspect-square w-[88%] -translate-x-1/2 rounded-full border-[2px] border-accent/50" />
           <div className="relative mx-auto aspect-[.67] w-[82%] overflow-hidden rounded-t-[48%] rounded-b-[8%] bg-[#242424]">
-            <img src="https://www.figma.com/api/mcp/asset/63dabd01-28c9-44d6-a8ec-bc257c021f1c/42054.png" alt="Portrait of the portfolio designer" className="h-full w-full object-cover object-top grayscale" />
+            <img src="images/hero/profile.png" alt="Portrait of the portfolio designer" className="h-full w-full  object-cover object-top grayscale" />
           </div>
         </div>
       </Container>
