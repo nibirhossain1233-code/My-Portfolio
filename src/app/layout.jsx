@@ -9,7 +9,7 @@ const lato = Lato({
 });
 
 export const metadata = {
-  title: "Portfolio | UI/UX Designer",
+  title: "Portfolio | Web Developer",
   description: "Personal portfolio website",
 };
 

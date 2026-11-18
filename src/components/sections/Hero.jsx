@@ -9,7 +9,7 @@ export default function Hero() {
       <Container className="grid items-center gap-12 lg:grid-cols-[1fr_.9fr] lg:gap-8">
         <div className="order-2 lg:order-1">
           <p className="text-[22px] font-semibold tracking-[.7px] text-[#707070]">
-            Hi I am
+            Hi, I am
           </p>
           <p className="mt-2 text-[26px] font-bold tracking-[.8px] text-muted">
             {user.name}
@@ -63,11 +63,11 @@ export default function Hero() {
         </div>
         <div className="relative order-1 mx-auto w-full max-w-[520px] lg:order-2">
           <div className="absolute bottom-0 left-1/2 aspect-square w-[88%] -translate-x-1/2 rounded-full border-[2px] border-accent/50" />
-          <div className="relative mx-auto aspect-[.67] w-[82%] overflow-hidden rounded-t-[48%] rounded-b-[8%] bg-[#242424]">
+          <div className="relative mx-auto aspect-[.67] w-[82%] overflow-hidden rounded-t-[48%] rounded-b-[8%] bg-[#1a1919]">
             <img
               src="images/hero/profile.png"
               alt="Portrait of the portfolio designer"
-              className="h-full w-full  object-cover object-top grayscale"
+              className="h-full w-full  object-cover object-top"
             />
           </div>
         </div>
