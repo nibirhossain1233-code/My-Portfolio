@@ -1,19 +1,49 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 body {
+  margin: 0;
   background: #111111;
   color: #fefefe;
-  font-family: var(--font-lato), sans-serif;
+  font-family: var(--font-lato), Arial, sans-serif;
+  overflow-x: hidden;
 }
-
-::selection {
-  background: #fd6f00;
-  color: white;
+button, input, textarea { font: inherit; }
+::selection { background: #fd6f00; color: #fff; }
+.container-site {
+  width: min(100% - 40px, 1280px);
+  margin-inline: auto;
+}
+.section-space { padding-block: 110px; }
+.section-heading { font-size: clamp(30px, 3vw, 40px); line-height: 1.2; font-weight: 700; }
+.section-description { color: #707070; font-size: 18px; line-height: 1.6; }
+.gradient-text {
+  background: linear-gradient(93deg, #984300 0%, #fd6f00 48%, #ca5900 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.gradient-button {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 48px; padding: 12px 40px; border-radius: 8px;
+  color: #fff; font-weight: 700; letter-spacing: .48px;
+  background: linear-gradient(104deg, #fd6f00 3.1%, #e46400 94.54%);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.gradient-button:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(253,111,0,.2); }
+.outline-button {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 48px; padding: 10px 38px; border: 2px solid #959595;
+  border-radius: 8px; color: #d0d0d0; font-weight: 700;
+  transition: border-color .2s ease, color .2s ease;
+}
+.outline-button:hover { border-color: #fd6f00; color: #fd6f00; }
+.glass-card { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.025); }
+@media (max-width: 767px) {
+  .section-space { padding-block: 76px; }
+  .container-site { width: min(100% - 32px, 1280px); }
 }

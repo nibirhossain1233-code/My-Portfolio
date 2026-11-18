@@ -1,0 +1,32 @@
+import Container from "@/components/common/Container";
+import SectionHeading from "@/components/common/SectionHeading";
+import { PrimaryButton } from "@/components/common/Button";
+
+const skills = [["Figma", 100], ["Adobe XD", 100], ["Photoshop", 85], ["Illustrator", 60], ["Premiere", 70]];
+
+export default function About() {
+  return (
+    <section id="about" className="section-space">
+      <Container>
+        <SectionHeading title="About Me" description="A little bit about my background, experience and creative approach." />
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+          <div className="mx-auto w-full max-w-[480px] overflow-hidden rounded-[42px] bg-[#222]">
+            <img src="https://www.figma.com/api/mcp/asset/63dabd01-28c9-44d6-a8ec-bc257c021f1c/42054.png" alt="Designer portrait" className="aspect-[4/5] w-full object-cover object-top grayscale" />
+          </div>
+          <div>
+            <p className="text-[17px] leading-[1.9] text-[#959595]">Lorem ipsum dolor sit amet consectetur. Imperdiet convallis blandit felis ligula aliquam. Aenean enim amet, facilisis pellentesque. I design thoughtful digital experiences with a focus on clarity, usability and visual detail.</p>
+            <div className="mt-8 space-y-5">
+              {skills.map(([name, value]) => (
+                <div key={name}>
+                  <div className="mb-2 flex justify-between text-sm font-semibold text-[#ddd]"><span>{name}</span><span>{value}%</span></div>
+                  <div className="h-2 overflow-hidden rounded-full bg-white/10"><div className="h-full rounded-full bg-gradient-to-r from-[#fd6f00] to-[#e46400]" style={{ width: `${value}%` }} /></div>
+                </div>
+              ))}
+            </div>
+            <div className="mt-9"><PrimaryButton href="cv/cv.pdf" download="Mahmood-Fazile-CV.pdf">Download CV</PrimaryButton></div>
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
+}

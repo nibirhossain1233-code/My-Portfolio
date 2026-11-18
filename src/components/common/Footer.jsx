@@ -1,95 +1,100 @@
+
 import Link from "next/link";
 import {
   FaInstagram,
   FaLinkedinIn,
   FaDribbble,
   FaBehance,
-  FaEnvelope,
-  FaPhone,
-} from "react-icons/fa6";
+} from "react-icons/fa";
+import { MdOutlineMail, MdOutlinePhone } from "react-icons/md";
+import Container from "./Container";
 
-const Footer = () => {
-  const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "Services", href: "#services" },
-    { name: "About me", href: "#about" },
-    { name: "Portfolio", href: "#portfolio" },
-    { name: "Contact me", href: "#contact" },
-  ];
+const navLinks = [
+  { name: "Home", href: "#home" },
+  { name: "Services", href: "#services" },
+  { name: "About me", href: "#about" },
+  { name: "Portfolio", href: "#portfolio" },
+  { name: "Contact me", href: "#contact" },
+];
 
-  const socialLinks = [
-    <FaInstagram />,
-    <FaLinkedinIn />,
-    <FaDribbble />,
-    <FaBehance />,
-  ];
+const socialLinks = [
+  { icon: FaInstagram, href: "#", label: "Instagram" },
+  { icon: FaLinkedinIn, href: "#", label: "LinkedIn" },
+  { icon: FaDribbble, href: "#", label: "Dribbble" },
+  { icon: FaBehance, href: "#", label: "Behance" },
+];
 
+export default function Footer() {
   return (
-    <footer className="bg-white/[0.04] px-5 py-12">
-      <div className="max-w-[1280px] mx-auto">
-
-        {/* Logo */}
-        <div className="text-center">
+    <footer className="bg-white/[0.04] pt-10 pb-6">
+      <Container>
+        {/* Logo and Navigation */}
+        <div className="flex flex-col items-center gap-[50px]">
           <Link
-            href="#home"
-            className="text-3xl font-bold bg-gradient-to-r from-[#fa6e00] to-[#e60026] bg-clip-text text-transparent"
+            href="/"
+            className="bg-gradient-to-r from-[#fa6e00] to-[#e60026] bg-clip-text font-bold text-[30px] tracking-[0.9px] text-transparent"
           >
             LOGO
           </Link>
+
+          <nav className="flex flex-wrap items-center justify-center gap-x-[60px] gap-y-5">
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="text-[20px] font-medium tracking-[0.6px] text-[#959595] transition-colors duration-300 hover:text-white"
+              >
+                {link.name}
+              </Link>
+            ))}
+          </nav>
         </div>
 
-        {/* Navigation */}
-        <div className="flex flex-wrap justify-center gap-6 md:gap-[60px] mt-10">
-          {navLinks.map((link) => (
+        {/* Social Links and Contact Information */}
+        <div className="mt-[50px] flex flex-col items-center gap-[50px]">
+          {/* Social Icons */}
+          <div className="flex items-center gap-5">
+            {socialLinks.map(({ icon: Icon, href, label }) => (
+              <a
+                key={label}
+                href={href}
+                aria-label={label}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-[#575757] text-white transition-all duration-300 hover:bg-gradient-to-r hover:from-[#fd6f00] hover:to-[#e46400]"
+              >
+                <Icon size={24} />
+              </a>
+            ))}
+          </div>
+
+          {/* Email and Phone */}
+          <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-5">
             <a
-              key={link.name}
-              href={link.href}
-              className="text-[#959595] hover:text-[#fd6f00] transition"
+              href="mailto:Mahmood.fazile7005@gmail.com"
+              className="flex items-center gap-[14px] text-[20px] font-bold tracking-[0.6px] text-[#959595] transition-colors hover:text-white"
             >
-              {link.name}
+              <MdOutlineMail size={24} />
+              <span>Mahmood.fazile7005@gmail.com</span>
             </a>
-          ))}
-        </div>
 
-        {/* Social Links */}
-        <div className="flex justify-center gap-5 mt-12">
-          {socialLinks.map((icon, index) => (
             <a
-              key={index}
-              href="#"
-              className="w-10 h-10 rounded-full bg-[#222222] flex items-center justify-center text-white text-xl hover:bg-[#fd6f00] transition"
+              href="tel:+93729107005"
+              className="flex items-center gap-[14px] text-[20px] font-bold tracking-[0.6px] text-[#959595] transition-colors hover:text-white"
             >
-              {icon}
+              <MdOutlinePhone size={24} />
+              <span>+93 729 107 005</span>
             </a>
-          ))}
-        </div>
-
-        {/* Contact Information */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 mt-12 text-[#959595]">
-          <a
-            href="mailto:Mahmood.fazile7005@gmail.com"
-            className="flex items-center gap-3"
-          >
-            <FaEnvelope />
-            Mahmood.fazile7005@gmail.com
-          </a>
-
-          <a href="tel:+93729107005" className="flex items-center gap-3">
-            <FaPhone />
-            +93 729 107 005
-          </a>
+          </div>
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-[#707070] mt-12 pt-6 text-center">
-          <p className="text-sm text-[#707070]">
+        <div className="mx-auto mt-[50px] flex max-w-[593px] justify-center border-t border-[#707070] px-4 pt-4 text-center">
+          <p className="text-[16px] font-bold tracking-[0.48px] text-[#707070]">
             Designed by @mahmood.fazile UI/UX designer
           </p>
         </div>
-
-      </div>
+      </Container>
     </footer>
   );
-};
-
-export default Footer;
+}
