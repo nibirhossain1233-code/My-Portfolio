@@ -5,7 +5,7 @@
 :root {
   color-scheme: dark;
 }
-* {
+*{
   box-sizing: border-box;
 }
 html {
@@ -49,33 +49,6 @@ textarea {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-}
-.gradient-button {
-
-}
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 48px;
-  padding: 10px 38px;
-  border: 2px solid #959595;
-  border-radius: 8px;
-  color: #d0d0d0;
-  font-weight: 700;
-  transition:
-    border-color 0.2s ease,
-    color 0.2s ease;
-}
-.button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(253, 111, 0, 0.2);
-  color: #fff;
-  background: linear-gradient(104deg, #fd6f00 3.1%, #e46400 94.54%);
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-  border:2px solid transparent;
 }
 .glass-card {
   background: rgba(255, 255, 255, 0.04);

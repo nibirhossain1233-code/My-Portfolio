@@ -1,6 +1,3 @@
 export function PrimaryButton({ children, href = "#contact", className = "",download }) {
-  return <a href={href} download={download} className={`button ${className}`}>{children}</a>;
-}
-export function OutlineButton({ children, href = "#", className = "", download}) {
-  return <a href={href} download={download} className={`button ${className}`}>{children}</a>;
+  return <a href={href} download={download} className={`${className} inline-block border-2 border-[#959595] rounded-lg text-[#d0d0d0] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(253,111,0,0.2)] hover:text-white hover:bg-[linear-gradient(104deg,#fd6f00_3.1%,#e46400_94.54%)] hover:border-none`}>{children}</a>;
 }

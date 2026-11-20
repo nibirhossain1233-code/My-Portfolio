@@ -45,7 +45,7 @@ export default function About() {
               ))}
             </div>
             <div className="mt-9">
-              <PrimaryButton href="cv/cv.pdf" download="Mahmood-Fazile-CV.pdf">
+              <PrimaryButton href="cv/cv.pdf" download="Nibir-hossain-Cv.pdf">
                 Download CV
               </PrimaryButton>
             </div>

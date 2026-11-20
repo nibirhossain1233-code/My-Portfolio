@@ -35,11 +35,11 @@ export default function Hero() {
               );
             })}
           </div>
-          <div className="mt-12 flex flex-wrap gap-5">
-            <PrimaryButton>Hire Me</PrimaryButton>
-            <OutlineButton download="Nibir's Cv" href="cv/cv.pdf">
+          <div className="mt-12 flex items-center gap-2">
+            <PrimaryButton className="h-[33px] w-[85px] px-[16px] py-[8px] text-[14px] md:h-[43px] md:w-[156px] md:px-[40px] md:py-[12px] md:text-[16px]">Hire Me</PrimaryButton>
+            <PrimaryButton className="h-[33px] w-[85px] px-[16px] py-[8px] text-[14px] md:h-[43px] md:w-[142px] md:px-[40px] md:py-[12px] md:text-[16px]" download="Nibir-hossain-Cv" href="cv/cv.pdf">
               Download CV
-            </OutlineButton>
+            </PrimaryButton>
           </div>
           <div className="glass-card mt-16 flex max-w-[550px] flex-wrap gap-7 rounded-lg p-6 sm:gap-9">
             {[
