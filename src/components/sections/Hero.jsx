@@ -43,9 +43,9 @@ export default function Hero() {
           </div>
           <div className="glass-card mt-16 flex max-w-[550px] flex-wrap gap-7 rounded-lg p-6 sm:gap-9">
             {[
-              ["5+", "Experiences"],
-              ["20+", "Project done"],
-              ["80+", "Happy Clients"],
+              [`${user.experiences}+`, "Experiences"],
+              [`${user.projectDone}+`, "Project done"],
+              [`${user.happyClients}+`, "Happy Clients"],
             ].map(([num, label], i) => (
               <div
                 key={label}

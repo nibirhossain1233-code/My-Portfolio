@@ -32,7 +32,7 @@ textarea {
   margin-inline: auto;
 }
 .section-space {
-  padding-block: 110px;
+  padding-block: 50px;
 }
 .section-heading {
   font-size: clamp(30px, 3vw, 40px);
@@ -51,6 +51,7 @@ textarea {
   color: transparent;
 }
 .gradient-button {
+
 }
 .button {
   display: inline-flex;

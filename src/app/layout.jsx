@@ -1,5 +1,6 @@
 import { Lato } from "next/font/google";
 import "./globals.css";
+import ScrollToTop from "@/components/common/ScrollToTop";
 
 const lato = Lato({
   subsets: ["latin"],
@@ -16,7 +17,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={lato.variable}>{children}</body>
+      <body className={lato.variable}>{children}
+        <ScrollToTop/>
+      </body>
     </html>
   );
 }
